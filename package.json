@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-css": "node-sass css/style.scss css/style.css",
+    "build-css": "node-sass --output-style compressed css/style.scss css/style.css",
     "watch-css": "node-sass --watch --source-map true css/style.scss css/style.css"
   },
   "author": "",
