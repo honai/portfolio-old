@@ -31,20 +31,20 @@ img {
 // Variant
 $primary-color: #02545A;
 $shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+$headerHeight: 36px;
+
 .page-layout {
   color: #333;
   background-color: #FFF;
 
   > .header > .fixed-header {
-    $height: 36px;
-
     position: fixed;
-    height: $height;
+    height: $headerHeight;
     top: 0;
     width: 100%;
     z-index: 100;
     &.hidden {
-      top: -$height;
+      top: -$headerHeight;
     }
   }
   > .main {
@@ -70,13 +70,13 @@ $shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   transition: top ease-out 0.3s;
 
   > .title {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.7);
     margin: 0;
-    font-size: 1.2rem;
+    font-size: $headerHeight * 0.7;
   }
 }
 
-.large-header {
+.hero-area {
   align-items: center;
   background-color: $primary-color;
   color: #FFF;
@@ -131,6 +131,7 @@ $shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .main-section {
+  padding-bottom: 10px;
   > .heading {
     display: flex;
     align-items: center;
@@ -163,7 +164,7 @@ $shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   justify-content: space-around;
 
   > .skill-card {
-    width: 180px;
+    width: 150px;
   }
 }
 
@@ -182,10 +183,15 @@ $shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   }
 }
 
+.works-wrap {
+  > .work-panel {
+    margin: 10px;
+  }
+}
 .work-panel {
   display: flex;
   flex-flow: column nowrap;
-  margin: 10px;
+  align-items: center;
 
   > .image {
     max-width: 360px;
@@ -197,6 +203,7 @@ $shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   > .text {
     display: flex;
     flex-flow: column nowrap;
+    margin: 15px 0;
   
     > .title > h4 {
       font-size: 2rem;
@@ -228,7 +235,7 @@ $shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     color: inherit;
     text-align: center;
   }
-  > .sns > img {
+  > .sns > svg {
     width: 64px;
   }
   > .sns .accountname {
@@ -245,6 +252,7 @@ $shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 @media screen and (min-width: 600px) {
   .work-panel {
     flex-flow: row nowrap;
+    align-items: stretch;
   
     > .text {
       margin: 0 1rem;
@@ -252,12 +260,15 @@ $shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   }
 }
 @media screen and (min-width: 768px) {
-  .large-header {
+  .hero-area {
     > .name {
       font-size: 3rem;
     }
     > .subtitle {
       font-size: 1.5rem;
     }
+  }
+  .skills-wrap > .skill-card {
+    width: 210px;
   }
 }
