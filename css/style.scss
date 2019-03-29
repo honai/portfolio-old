@@ -178,9 +178,11 @@ $headerHeight: 36px;
   }
   > .figure > svg {
     width: 100%;
+    display: block;
   }
   > .title {
     margin: 0.5rem 0;
+    font-size: 1.2rem;
   }
 }
 
