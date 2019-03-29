@@ -175,7 +175,7 @@ img {
 
 ._reset-a {
   color: inherit;
-  text-decoration-line: inherit; }
+  text-decoration: inherit; }
 
 @media screen and (min-width: 600px) {
   .work-panel {
