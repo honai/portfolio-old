@@ -157,17 +157,27 @@ $shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   }
 }
 
-.skill-asset {
+.skills-wrap {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
 
-  > .card {
+  > .skill-card {
     width: 180px;
-    text-align: center;
-    padding: 20px;
   }
-  > .card > .title {
+}
+
+.skill-card {
+  text-align: center;
+  padding: 20px;
+
+  > .figure {
+    margin: 10px;
+  }
+  > .figure > svg {
+    width: 100%;
+  }
+  > .title {
     margin: 0.5rem 0;
   }
 }

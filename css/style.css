@@ -123,15 +123,21 @@ img {
 .main-section > .para {
   margin-left: 10px; }
 
-.skill-asset {
+.skills-wrap {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around; }
-  .skill-asset > .card {
-    width: 180px;
-    text-align: center;
-    padding: 20px; }
-  .skill-asset > .card > .title {
+  .skills-wrap > .skill-card {
+    width: 180px; }
+
+.skill-card {
+  text-align: center;
+  padding: 20px; }
+  .skill-card > .figure {
+    margin: 10px; }
+  .skill-card > .figure > svg {
+    width: 100%; }
+  .skill-card > .title {
     margin: 0.5rem 0; }
 
 .work-panel {
