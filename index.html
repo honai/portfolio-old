@@ -9,8 +9,11 @@
 </head>
 <body class="page-layout">
   <header class="header">
+    <a href="#" id="fixed-header" class="fixed-header hidden _reset-a">
+      <h1 class="title century-gothic">Honai Ueoka</h1>
+    </a>
     <div class="large-header">
-      <div class="icon"><img src="image/profile.png" alt="アイコン" height="100%"></div>
+      <div id="icon" class="icon"><img src="image/profile.png" alt="アイコン" height="100%"></div>
       <h1 class="name century-gothic">Honai Ueoka</h1>
       <h2 class="subtitle century-gothic">Student at Kyoto University.</h2>
       <div class="scroll-icon"></div>
@@ -87,7 +90,18 @@
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
 <script>
-
+const handleHeader = (scrollTop) => {
+  const fixedHeader = document.getElementById('fixed-header')
+  const togglePoint = document.getElementById('icon').clientHeight;
+  if (scrollTop > togglePoint) {
+    fixedHeader.classList.remove('hidden');
+  } else {
+    fixedHeader.classList.add('hidden');
+  }
+}
+window.onscroll = () => {
+  handleHeader(document.body.scrollTop || document.documentElement.scrollTop);
+}
 </script>
 </body>
 </html>

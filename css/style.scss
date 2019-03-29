@@ -30,12 +30,23 @@ img {
 
 // Variant
 $primary-color: #02545A;
-
+$shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 .page-layout {
   color: #333;
   background-color: #FFF;
 
-  > .header {}
+  > .header > .fixed-header {
+    $height: 36px;
+
+    position: fixed;
+    height: $height;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    &.hidden {
+      top: -$height;
+    }
+  }
   > .main {
     width: 100%;
     max-width: 960px;
@@ -47,6 +58,21 @@ $primary-color: #02545A;
     color: #CCC;
     text-align: center;
     padding: 10px;  
+  }
+}
+
+.fixed-header {
+  background-color: $primary-color;
+  box-shadow: $shadow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: top ease-out 0.3s;
+
+  > .title {
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+    font-size: 1.2rem;
   }
 }
 

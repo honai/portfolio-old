@@ -26,6 +26,14 @@ img {
 .page-layout {
   color: #333;
   background-color: #FFF; }
+  .page-layout > .header > .fixed-header {
+    position: fixed;
+    height: 36px;
+    top: 0;
+    width: 100%;
+    z-index: 100; }
+    .page-layout > .header > .fixed-header.hidden {
+      top: -36px; }
   .page-layout > .main {
     width: 100%;
     max-width: 960px;
@@ -36,6 +44,18 @@ img {
     color: #CCC;
     text-align: center;
     padding: 10px; }
+
+.fixed-header {
+  background-color: #02545A;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: top ease-out 0.3s; }
+  .fixed-header > .title {
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+    font-size: 1.2rem; }
 
 .large-header {
   align-items: center;
