@@ -4,13 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "build-css": "node-sass css/style.scss css/style.css",
+    "watch-css": "node-sass --watch --source-map true css/style.scss css/style.css"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.11.0",
-    "nodemon": "^1.18.10"
+    "node-sass": "^4.11.0"
   }
 }
