@@ -184,7 +184,8 @@ img {
     color: inherit;
     text-align: center; }
   .accounts-box > .sns > svg {
-    width: 64px; }
+    width: 64px;
+    height: 64px; }
   .accounts-box > .sns .accountname {
     margin-top: 10px; }
 
